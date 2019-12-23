@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\Downloads\;CMake Files\..\Downloads\opencv\;CMake Files\..\Downloads\opencv\opencv\;CMake Files\..\Downloads\opencv\opencv\build\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/cedric/SFND_3D_Object_Tracking/cmake-build-debug"/>
+				<Option working_dir="/home/cedric/SFND_3D_Tracking/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Object_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Object_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Object_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Object_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/cedric/SFND_3D_Object_Tracking/cmake-build-debug"/>
+				<Option working_dir="/home/cedric/SFND_3D_Tracking/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Object_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Object_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Object_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Object_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="3D_object_tracking">
-				<Option output="/home/cedric/SFND_3D_Object_Tracking/cmake-build-debug/3D_object_tracking" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/cedric/SFND_3D_Object_Tracking/cmake-build-debug"/>
+				<Option output="/home/cedric/SFND_3D_Tracking/cmake-build-debug/3D_object_tracking" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/cedric/SFND_3D_Tracking/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -97,15 +97,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Object_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 3D_object_tracking"/>
-					<CompileFile command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Object_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Object_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Object_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 3D_object_tracking"/>
+					<CompileFile command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="3D_object_tracking/fast">
-				<Option output="/home/cedric/SFND_3D_Object_Tracking/cmake-build-debug/3D_object_tracking" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/cedric/SFND_3D_Object_Tracking/cmake-build-debug"/>
+				<Option output="/home/cedric/SFND_3D_Tracking/cmake-build-debug/3D_object_tracking" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/cedric/SFND_3D_Tracking/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -173,54 +173,54 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Object_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 3D_object_tracking/fast"/>
-					<CompileFile command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Object_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Object_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Object_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 3D_object_tracking/fast"/>
+					<CompileFile command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/cedric/SFND_3D_Object_Tracking/cmake-build-debug"/>
+				<Option working_dir="/home/cedric/SFND_3D_Tracking/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Object_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Object_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Object_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Object_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j24 -f &quot;/home/cedric/SFND_3D_Tracking/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/cedric/SFND_3D_Object_Tracking/src/FinalProject_Camera.cpp">
+		<Unit filename="/home/cedric/SFND_3D_Tracking/src/FinalProject_Camera.cpp">
 			<Option target="3D_object_tracking"/>
 		</Unit>
-		<Unit filename="/home/cedric/SFND_3D_Object_Tracking/src/camFusion_Student.cpp">
+		<Unit filename="/home/cedric/SFND_3D_Tracking/src/camFusion_Student.cpp">
 			<Option target="3D_object_tracking"/>
 		</Unit>
-		<Unit filename="/home/cedric/SFND_3D_Object_Tracking/src/lidarData.cpp">
+		<Unit filename="/home/cedric/SFND_3D_Tracking/src/lidarData.cpp">
 			<Option target="3D_object_tracking"/>
 		</Unit>
-		<Unit filename="/home/cedric/SFND_3D_Object_Tracking/src/lidarData.hpp">
+		<Unit filename="/home/cedric/SFND_3D_Tracking/src/lidarData.hpp">
 			<Option target="3D_object_tracking"/>
 		</Unit>
-		<Unit filename="/home/cedric/SFND_3D_Object_Tracking/src/matching2D_Student.cpp">
+		<Unit filename="/home/cedric/SFND_3D_Tracking/src/matching2D_Student.cpp">
 			<Option target="3D_object_tracking"/>
 		</Unit>
-		<Unit filename="/home/cedric/SFND_3D_Object_Tracking/src/objectDetection2D.cpp">
+		<Unit filename="/home/cedric/SFND_3D_Tracking/src/objectDetection2D.cpp">
 			<Option target="3D_object_tracking"/>
 		</Unit>
-		<Unit filename="/home/cedric/SFND_3D_Object_Tracking/src/objectDetection2D.hpp">
+		<Unit filename="/home/cedric/SFND_3D_Tracking/src/objectDetection2D.hpp">
 			<Option target="3D_object_tracking"/>
 		</Unit>
-		<Unit filename="/home/cedric/SFND_3D_Object_Tracking/CMakeLists.txt">
+		<Unit filename="/home/cedric/SFND_3D_Tracking/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/cedric/SFND_3D_Object_Tracking/../Downloads/opencv/opencv/build/OpenCVConfig-version.cmake">
+		<Unit filename="/home/cedric/SFND_3D_Tracking/../Downloads/opencv/opencv/build/OpenCVConfig-version.cmake">
 			<Option virtualFolder="CMake Files\..\Downloads\opencv\opencv\build\"/>
 		</Unit>
-		<Unit filename="/home/cedric/SFND_3D_Object_Tracking/../Downloads/opencv/opencv/build/OpenCVConfig.cmake">
+		<Unit filename="/home/cedric/SFND_3D_Tracking/../Downloads/opencv/opencv/build/OpenCVConfig.cmake">
 			<Option virtualFolder="CMake Files\..\Downloads\opencv\opencv\build\"/>
 		</Unit>
-		<Unit filename="/home/cedric/SFND_3D_Object_Tracking/../Downloads/opencv/opencv/build/OpenCVModules.cmake">
+		<Unit filename="/home/cedric/SFND_3D_Tracking/../Downloads/opencv/opencv/build/OpenCVModules.cmake">
 			<Option virtualFolder="CMake Files\..\Downloads\opencv\opencv\build\"/>
 		</Unit>
 	</Project>

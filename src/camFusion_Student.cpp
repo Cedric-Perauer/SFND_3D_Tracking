@@ -148,7 +148,45 @@ void computeTTCCamera(std::vector<cv::KeyPoint> &kptsPrev, std::vector<cv::KeyPo
 void computeTTCLidar(std::vector<LidarPoint> &lidarPointsPrev,
                      std::vector<LidarPoint> &lidarPointsCurr, double frameRate, double &TTC)
 {
-    // ...
+        double t = 1.0/frameRate;
+//        float lanewidth = 4.0;
+//        std::vector<LidarPoint> point_holder;
+//
+//        //filter points that are not in or close to our lane as we just want to comupte TTC
+//        for(auto it = lidarPointsPrev.begin();it != lidarPointsPrev.end();++it)
+//        {
+//            if(abs(it->y) <= lanewidth/2)
+//            {
+//                point_holder.emplace_back(*it);
+//            }
+//        }
+//        lidarPointsPrev = point_holder;
+//        point_holder.clear();
+//
+//        for(auto it = lidarPointsCurr.begin();it != lidarPointsCurr.end();++it)
+//        {
+//            if(abs(it->y) <= lanewidth/2)
+//            {
+//                point_holder.emplace_back(*it);
+//            }
+//        }
+//        lidarPointsCurr = point_holder;
+
+        //sort points and take median value for more stability
+        std::sort(lidarPointsPrev.begin(), lidarPointsPrev.end(),[](LidarPoint one,LidarPoint two)
+        {
+            return one.x < two.x;
+        });
+        std::sort(lidarPointsCurr.begin(), lidarPointsCurr.end(),[](LidarPoint one,LidarPoint two)
+        {
+            return one.x < two.x;
+        });
+        int prev_mid = lidarPointsPrev.size()/2;
+        int cur_mid = lidarPointsCurr.size()/2;
+        double distance_0 = lidarPointsPrev[prev_mid].x;
+        double distance_1 = lidarPointsCurr[cur_mid].x;
+
+        TTC = (distance_1*t)/(distance_0-distance_1);
 }
 
 

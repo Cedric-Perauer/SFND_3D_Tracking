@@ -43,10 +43,10 @@ RM = /snap/clion/99/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/cedric/SFND_3D_Object_Tracking
+CMAKE_SOURCE_DIR = /home/cedric/SFND_3D_Tracking
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/cedric/SFND_3D_Object_Tracking/cmake-build-debug
+CMAKE_BINARY_DIR = /home/cedric/SFND_3D_Tracking/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/3D_object_tracking.dir/depend.make
@@ -59,68 +59,68 @@ include CMakeFiles/3D_object_tracking.dir/flags.make
 
 CMakeFiles/3D_object_tracking.dir/src/camFusion_Student.cpp.o: CMakeFiles/3D_object_tracking.dir/flags.make
 CMakeFiles/3D_object_tracking.dir/src/camFusion_Student.cpp.o: ../src/camFusion_Student.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cedric/SFND_3D_Object_Tracking/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/3D_object_tracking.dir/src/camFusion_Student.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/3D_object_tracking.dir/src/camFusion_Student.cpp.o -c /home/cedric/SFND_3D_Object_Tracking/src/camFusion_Student.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cedric/SFND_3D_Tracking/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/3D_object_tracking.dir/src/camFusion_Student.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/3D_object_tracking.dir/src/camFusion_Student.cpp.o -c /home/cedric/SFND_3D_Tracking/src/camFusion_Student.cpp
 
 CMakeFiles/3D_object_tracking.dir/src/camFusion_Student.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/3D_object_tracking.dir/src/camFusion_Student.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cedric/SFND_3D_Object_Tracking/src/camFusion_Student.cpp > CMakeFiles/3D_object_tracking.dir/src/camFusion_Student.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cedric/SFND_3D_Tracking/src/camFusion_Student.cpp > CMakeFiles/3D_object_tracking.dir/src/camFusion_Student.cpp.i
 
 CMakeFiles/3D_object_tracking.dir/src/camFusion_Student.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/3D_object_tracking.dir/src/camFusion_Student.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cedric/SFND_3D_Object_Tracking/src/camFusion_Student.cpp -o CMakeFiles/3D_object_tracking.dir/src/camFusion_Student.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cedric/SFND_3D_Tracking/src/camFusion_Student.cpp -o CMakeFiles/3D_object_tracking.dir/src/camFusion_Student.cpp.s
 
 CMakeFiles/3D_object_tracking.dir/src/FinalProject_Camera.cpp.o: CMakeFiles/3D_object_tracking.dir/flags.make
 CMakeFiles/3D_object_tracking.dir/src/FinalProject_Camera.cpp.o: ../src/FinalProject_Camera.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cedric/SFND_3D_Object_Tracking/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/3D_object_tracking.dir/src/FinalProject_Camera.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/3D_object_tracking.dir/src/FinalProject_Camera.cpp.o -c /home/cedric/SFND_3D_Object_Tracking/src/FinalProject_Camera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cedric/SFND_3D_Tracking/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/3D_object_tracking.dir/src/FinalProject_Camera.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/3D_object_tracking.dir/src/FinalProject_Camera.cpp.o -c /home/cedric/SFND_3D_Tracking/src/FinalProject_Camera.cpp
 
 CMakeFiles/3D_object_tracking.dir/src/FinalProject_Camera.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/3D_object_tracking.dir/src/FinalProject_Camera.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cedric/SFND_3D_Object_Tracking/src/FinalProject_Camera.cpp > CMakeFiles/3D_object_tracking.dir/src/FinalProject_Camera.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cedric/SFND_3D_Tracking/src/FinalProject_Camera.cpp > CMakeFiles/3D_object_tracking.dir/src/FinalProject_Camera.cpp.i
 
 CMakeFiles/3D_object_tracking.dir/src/FinalProject_Camera.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/3D_object_tracking.dir/src/FinalProject_Camera.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cedric/SFND_3D_Object_Tracking/src/FinalProject_Camera.cpp -o CMakeFiles/3D_object_tracking.dir/src/FinalProject_Camera.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cedric/SFND_3D_Tracking/src/FinalProject_Camera.cpp -o CMakeFiles/3D_object_tracking.dir/src/FinalProject_Camera.cpp.s
 
 CMakeFiles/3D_object_tracking.dir/src/lidarData.cpp.o: CMakeFiles/3D_object_tracking.dir/flags.make
 CMakeFiles/3D_object_tracking.dir/src/lidarData.cpp.o: ../src/lidarData.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cedric/SFND_3D_Object_Tracking/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/3D_object_tracking.dir/src/lidarData.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/3D_object_tracking.dir/src/lidarData.cpp.o -c /home/cedric/SFND_3D_Object_Tracking/src/lidarData.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cedric/SFND_3D_Tracking/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/3D_object_tracking.dir/src/lidarData.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/3D_object_tracking.dir/src/lidarData.cpp.o -c /home/cedric/SFND_3D_Tracking/src/lidarData.cpp
 
 CMakeFiles/3D_object_tracking.dir/src/lidarData.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/3D_object_tracking.dir/src/lidarData.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cedric/SFND_3D_Object_Tracking/src/lidarData.cpp > CMakeFiles/3D_object_tracking.dir/src/lidarData.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cedric/SFND_3D_Tracking/src/lidarData.cpp > CMakeFiles/3D_object_tracking.dir/src/lidarData.cpp.i
 
 CMakeFiles/3D_object_tracking.dir/src/lidarData.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/3D_object_tracking.dir/src/lidarData.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cedric/SFND_3D_Object_Tracking/src/lidarData.cpp -o CMakeFiles/3D_object_tracking.dir/src/lidarData.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cedric/SFND_3D_Tracking/src/lidarData.cpp -o CMakeFiles/3D_object_tracking.dir/src/lidarData.cpp.s
 
 CMakeFiles/3D_object_tracking.dir/src/matching2D_Student.cpp.o: CMakeFiles/3D_object_tracking.dir/flags.make
 CMakeFiles/3D_object_tracking.dir/src/matching2D_Student.cpp.o: ../src/matching2D_Student.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cedric/SFND_3D_Object_Tracking/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/3D_object_tracking.dir/src/matching2D_Student.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/3D_object_tracking.dir/src/matching2D_Student.cpp.o -c /home/cedric/SFND_3D_Object_Tracking/src/matching2D_Student.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cedric/SFND_3D_Tracking/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/3D_object_tracking.dir/src/matching2D_Student.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/3D_object_tracking.dir/src/matching2D_Student.cpp.o -c /home/cedric/SFND_3D_Tracking/src/matching2D_Student.cpp
 
 CMakeFiles/3D_object_tracking.dir/src/matching2D_Student.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/3D_object_tracking.dir/src/matching2D_Student.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cedric/SFND_3D_Object_Tracking/src/matching2D_Student.cpp > CMakeFiles/3D_object_tracking.dir/src/matching2D_Student.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cedric/SFND_3D_Tracking/src/matching2D_Student.cpp > CMakeFiles/3D_object_tracking.dir/src/matching2D_Student.cpp.i
 
 CMakeFiles/3D_object_tracking.dir/src/matching2D_Student.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/3D_object_tracking.dir/src/matching2D_Student.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cedric/SFND_3D_Object_Tracking/src/matching2D_Student.cpp -o CMakeFiles/3D_object_tracking.dir/src/matching2D_Student.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cedric/SFND_3D_Tracking/src/matching2D_Student.cpp -o CMakeFiles/3D_object_tracking.dir/src/matching2D_Student.cpp.s
 
 CMakeFiles/3D_object_tracking.dir/src/objectDetection2D.cpp.o: CMakeFiles/3D_object_tracking.dir/flags.make
 CMakeFiles/3D_object_tracking.dir/src/objectDetection2D.cpp.o: ../src/objectDetection2D.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cedric/SFND_3D_Object_Tracking/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/3D_object_tracking.dir/src/objectDetection2D.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/3D_object_tracking.dir/src/objectDetection2D.cpp.o -c /home/cedric/SFND_3D_Object_Tracking/src/objectDetection2D.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cedric/SFND_3D_Tracking/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/3D_object_tracking.dir/src/objectDetection2D.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/3D_object_tracking.dir/src/objectDetection2D.cpp.o -c /home/cedric/SFND_3D_Tracking/src/objectDetection2D.cpp
 
 CMakeFiles/3D_object_tracking.dir/src/objectDetection2D.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/3D_object_tracking.dir/src/objectDetection2D.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cedric/SFND_3D_Object_Tracking/src/objectDetection2D.cpp > CMakeFiles/3D_object_tracking.dir/src/objectDetection2D.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cedric/SFND_3D_Tracking/src/objectDetection2D.cpp > CMakeFiles/3D_object_tracking.dir/src/objectDetection2D.cpp.i
 
 CMakeFiles/3D_object_tracking.dir/src/objectDetection2D.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/3D_object_tracking.dir/src/objectDetection2D.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cedric/SFND_3D_Object_Tracking/src/objectDetection2D.cpp -o CMakeFiles/3D_object_tracking.dir/src/objectDetection2D.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cedric/SFND_3D_Tracking/src/objectDetection2D.cpp -o CMakeFiles/3D_object_tracking.dir/src/objectDetection2D.cpp.s
 
 # Object files for target 3D_object_tracking
 3D_object_tracking_OBJECTS = \
@@ -190,7 +190,7 @@ CMakeFiles/3D_object_tracking.dir/src/objectDetection2D.cpp.s: cmake_force
 3D_object_tracking: /home/cedric/Downloads/opencv/opencv/build/lib/libopencv_imgproc.so.4.1.2
 3D_object_tracking: /home/cedric/Downloads/opencv/opencv/build/lib/libopencv_core.so.4.1.2
 3D_object_tracking: CMakeFiles/3D_object_tracking.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cedric/SFND_3D_Object_Tracking/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable 3D_object_tracking"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cedric/SFND_3D_Tracking/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable 3D_object_tracking"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/3D_object_tracking.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -203,6 +203,6 @@ CMakeFiles/3D_object_tracking.dir/clean:
 .PHONY : CMakeFiles/3D_object_tracking.dir/clean
 
 CMakeFiles/3D_object_tracking.dir/depend:
-	cd /home/cedric/SFND_3D_Object_Tracking/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cedric/SFND_3D_Object_Tracking /home/cedric/SFND_3D_Object_Tracking /home/cedric/SFND_3D_Object_Tracking/cmake-build-debug /home/cedric/SFND_3D_Object_Tracking/cmake-build-debug /home/cedric/SFND_3D_Object_Tracking/cmake-build-debug/CMakeFiles/3D_object_tracking.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/cedric/SFND_3D_Tracking/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cedric/SFND_3D_Tracking /home/cedric/SFND_3D_Tracking /home/cedric/SFND_3D_Tracking/cmake-build-debug /home/cedric/SFND_3D_Tracking/cmake-build-debug /home/cedric/SFND_3D_Tracking/cmake-build-debug/CMakeFiles/3D_object_tracking.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/3D_object_tracking.dir/depend
 

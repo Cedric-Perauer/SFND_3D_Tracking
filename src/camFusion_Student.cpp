@@ -133,7 +133,14 @@ void show3DObjects(std::vector<BoundingBox> &boundingBoxes, cv::Size worldSize, 
 // associate a given bounding box with the keypoints it contains
 void clusterKptMatchesWithROI(BoundingBox &boundingBox, std::vector<cv::KeyPoint> &kptsPrev, std::vector<cv::KeyPoint> &kptsCurr, std::vector<cv::DMatch> &kptMatches)
 {
-    // ...
+    for(auto point : kptMatches)
+    {
+        if(boundingBox.roi.contains(kptsCurr[point.trainIdx].pt))
+        {
+            boundingBox.kptMatches.emplace_back(point);
+        }
+    }
+
 }
 
 
@@ -141,13 +148,49 @@ void clusterKptMatchesWithROI(BoundingBox &boundingBox, std::vector<cv::KeyPoint
 void computeTTCCamera(std::vector<cv::KeyPoint> &kptsPrev, std::vector<cv::KeyPoint> &kptsCurr, 
                       std::vector<cv::DMatch> kptMatches, double frameRate, double &TTC, cv::Mat *visImg)
 {
-    // ...
+    double threshold = 100.0;
+    double dt = 1.0/frameRate;
+    vector<double> ratios;
+    for(auto it = kptMatches.begin();it!=kptMatches.end()-1;++it)
+    {
+        auto kpt1_cur = kptsCurr.at(it->trainIdx).pt;
+        auto kpt1_prev = kptsPrev.at(it->queryIdx).pt;
+
+        for(auto it2 = kptMatches.begin()+1;it2!=kptMatches.end();++it2)
+        {
+            auto kpt2_cur = kptsCurr.at(it2->trainIdx).pt;
+            auto kpt2_prev = kptsPrev.at(it2->queryIdx).pt;
+
+            //calc euclidean distance
+            double d_cur = cv::norm(kpt1_cur - kpt2_cur);
+            double d_prev = cv::norm(kpt1_prev - kpt2_prev);
+            if(d_cur >= threshold && d_prev >= std::numeric_limits<double>::epsilon())
+            {
+                //avoid division by 0
+                ratios.emplace_back(d_cur/d_prev);
+            }
+
+        }
+    }
+
+    if(ratios.size()==0) //both vectors are of same size
+    {
+        cout << "The distance ratio vector is empty, set TTC to not a number" << endl;
+        TTC = NAN;
+    }
+    else
+    {
+        std::sort(ratios.begin(),ratios.end());
+        int med_idx = ratios.size()/2;
+        double d = ratios[med_idx];
+        TTC = abs(dt/(1-d));
+    }
 }
 
 
 void computeTTCLidar(std::vector<LidarPoint> &lidarPointsPrev,
                      std::vector<LidarPoint> &lidarPointsCurr, double frameRate, double &TTC)
-{
+{       //same strategy as with camera
         double t = 1.0/frameRate;
 //        float lanewidth = 4.0;
 //        std::vector<LidarPoint> point_holder;

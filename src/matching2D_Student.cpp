@@ -4,6 +4,7 @@
 using namespace std;
 
 // Find best matches for keypoints in two camera images based on several matching methods
+// Find best matches for keypoints in two camera images based on several matching methods
 void matchDescriptors(std::vector<cv::KeyPoint> &kPtsSource, std::vector<cv::KeyPoint> &kPtsRef, cv::Mat &descSource, cv::Mat &descRef,
                       std::vector<cv::DMatch> &matches, std::string descriptorType, std::string matcherType, std::string selectorType)
 {
@@ -61,13 +62,18 @@ void matchDescriptors(std::vector<cv::KeyPoint> &kPtsSource, std::vector<cv::Key
 
     // Perform nearest neighbor matching (best match)
     if (selectorType.compare("SEL_NN") == 0)
-    {   if((kPtsRef.size()>=2 && kPtsSource.size()>=2) && (descSource.type()==descRef.type()) && (descSource.cols == descRef.cols))
+    {
+        if((kPtsRef.size()>=2 && kPtsSource.size()>=2) && (descSource.type()==descRef.type()) && (descSource.cols == descRef.cols))
         {matcher->match(descSource, descRef, matches);}
     }
 
         // Perform k nearest neighbors (k=2)
     else if (selectorType.compare("SEL_KNN") == 0)
-    {
+    {   if (descSource.type() != CV_8U || descRef.type()!= CV_8U)
+        { // OpenCV bug workaround : convert binary descriptors to floating point due to a bug in current OpenCV implementation
+            descSource.convertTo(descSource, CV_8U);
+            descRef.convertTo(descRef, CV_8U);
+        }
         int k = 2;
         vector<vector<cv::DMatch>> knn_matches;
         if(kPtsRef.size()>=2 && kPtsSource.size()>=2 && (descSource.type()==descRef.type()) && (descSource.cols == descRef.cols)  )
@@ -87,7 +93,6 @@ void matchDescriptors(std::vector<cv::KeyPoint> &kPtsSource, std::vector<cv::Key
         throw invalid_argument(selectorType + " is not a valid selectorType");
     }
 }
-
 
 
 

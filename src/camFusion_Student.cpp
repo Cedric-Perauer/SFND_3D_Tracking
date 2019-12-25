@@ -61,7 +61,7 @@ void clusterLidarWithROI(std::vector<BoundingBox> &boundingBoxes, std::vector<Li
 }
 
 
-void show3DObjects(std::vector<BoundingBox> &boundingBoxes, cv::Size worldSize, cv::Size imageSize, bool bWait)
+void show3DObjects(std::vector<BoundingBox> &boundingBoxes, cv::Size worldSize, cv::Size imageSize,cv::Mat &img, bool bWait)
 {
     // create topview image
     cv::Mat topviewImg(imageSize, CV_8UC3, cv::Scalar(255, 255, 255));
@@ -119,14 +119,15 @@ void show3DObjects(std::vector<BoundingBox> &boundingBoxes, cv::Size worldSize, 
     }
 
     // display image
-    string windowName = "3D Objects";
-    cv::namedWindow(windowName, 1);
-    cv::imshow(windowName, topviewImg);
+//    string windowName = "3D Objects";
+//    cv::namedWindow(windowName, 1);
+//    cv::imshow(windowName, topviewImg);
 
     if(bWait)
     {
         cv::waitKey(0); // wait for key to be pressed
     }
+    img = topviewImg;
 }
 
 
@@ -192,29 +193,6 @@ void computeTTCLidar(std::vector<LidarPoint> &lidarPointsPrev,
                      std::vector<LidarPoint> &lidarPointsCurr, double frameRate, double &TTC)
 {       //same strategy as with camera
         double t = 1.0/frameRate;
-//        float lanewidth = 4.0;
-//        std::vector<LidarPoint> point_holder;
-//
-//        //filter points that are not in or close to our lane as we just want to comupte TTC
-//        for(auto it = lidarPointsPrev.begin();it != lidarPointsPrev.end();++it)
-//        {
-//            if(abs(it->y) <= lanewidth/2)
-//            {
-//                point_holder.emplace_back(*it);
-//            }
-//        }
-//        lidarPointsPrev = point_holder;
-//        point_holder.clear();
-//
-//        for(auto it = lidarPointsCurr.begin();it != lidarPointsCurr.end();++it)
-//        {
-//            if(abs(it->y) <= lanewidth/2)
-//            {
-//                point_holder.emplace_back(*it);
-//            }
-//        }
-//        lidarPointsCurr = point_holder;
-
         //sort points and take median value for more stability
         std::sort(lidarPointsPrev.begin(), lidarPointsPrev.end(),[](LidarPoint one,LidarPoint two)
         {
@@ -237,39 +215,32 @@ void matchBoundingBoxes(std::vector<cv::DMatch> &matches, std::map<int, int> &bb
 {
     int kpt_counter[prevFrame.boundingBoxes.size()][currFrame.boundingBoxes.size()] = { };
     //check if keypoints are in the bounding boxes and store number of matches between consecutive frames to determine id later on
-    for(auto it = matches.begin();it!=matches.end()-1; ++it)
-    {
-        cv::KeyPoint train, query;
-        query = prevFrame.keypoints[it->queryIdx];
-        train = currFrame.keypoints[it->trainIdx];
-        vector<int> query_ids, train_ids;
-        for (int i = 0; i < prevFrame.boundingBoxes.size(); i++)
-        {
-            if (prevFrame.boundingBoxes[i].roi.contains(cv::Point(query.pt.x, query.pt.y)))
-            {
-                query_ids.emplace_back(i);
+    if(matches.size()!=0) {
+        for (auto it = matches.begin(); it != matches.end() - 1; ++it) {
+            cv::KeyPoint train, query;
+            query = prevFrame.keypoints[it->queryIdx];
+            train = currFrame.keypoints[it->trainIdx];
+            vector<int> query_ids, train_ids;
+            for (int i = 0; i < prevFrame.boundingBoxes.size(); i++) {
+                if (prevFrame.boundingBoxes[i].roi.contains(cv::Point(query.pt.x, query.pt.y))) {
+                    query_ids.emplace_back(i);
+                }
             }
-        }
 
-        for (int i = 0; i < currFrame.boundingBoxes.size(); i++)
-        {
-            if (currFrame.boundingBoxes[i].roi.contains(cv::Point(train.pt.x, train.pt.y)))
-            {
-                train_ids.emplace_back(i);
+            for (int i = 0; i < currFrame.boundingBoxes.size(); i++) {
+                if (currFrame.boundingBoxes[i].roi.contains(cv::Point(train.pt.x, train.pt.y))) {
+                    train_ids.emplace_back(i);
+                }
             }
-        }
 
-        if(!train_ids.empty() && !query_ids.empty())
-        {
-            for(auto i : query_ids)
-            {
-                for(auto j:train_ids)
-                {
-                    kpt_counter[i][j] +=1;
+            if (!train_ids.empty() && !query_ids.empty()) {
+                for (auto i : query_ids) {
+                    for (auto j:train_ids) {
+                        kpt_counter[i][j] += 1;
+                    }
                 }
             }
         }
-    }
 
     //get max keypoint region for each bounding box in frame 1
     for(int i = 0; i < prevFrame.boundingBoxes.size(); ++i)
@@ -287,4 +258,5 @@ void matchBoundingBoxes(std::vector<cv::DMatch> &matches, std::map<int, int> &bb
     }
    for(int i = 0; i < prevFrame.boundingBoxes.size();i++)
    {cout << " Bounding Box Number : " << i << " from first frame best matches with Box Number : " << bbBestMatches[i] << " from frame 2 " << endl;}
+    }
 }
